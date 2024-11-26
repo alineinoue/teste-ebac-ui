@@ -1,0 +1,20 @@
+[
+    {
+        "nomeProduto": "Miko Pullover Hoodie",
+        "tamanho": "XS", 
+        "cor": "Orange",
+        "quantidade": 4
+    },
+    {
+        "nomeProduto": "Selene Yoga Hoodie",
+        "tamanho": "M", 
+        "cor": "White",
+        "quantidade": 2
+    },
+    {
+        "nomeProduto": "Autumn Pullie",
+        "tamanho": "L", 
+        "cor": "Red",
+        "quantidade": 6
+    }
+]

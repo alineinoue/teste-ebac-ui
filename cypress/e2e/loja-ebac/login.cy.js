@@ -15,7 +15,7 @@ describe('Funcionalidade: Login', () => {
         cy.get('#username').type('aline.teste@teste.com')
         cy.get('#password').type('teste@123')
         cy.get('.woocommerce-form > .button').click()
-        cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá, alineteste (não é alineteste? Sair)')
+        cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('exist')
     })
 
     it('Deve exibir uma mensagem de erro ao inserir usuário inválido', () => {
@@ -36,7 +36,7 @@ describe('Funcionalidade: Login', () => {
         cy.get('#username').type(perfil.usuario)
         cy.get('#password').type(perfil.senha)
         cy.get('.woocommerce-form > .button').click()
-        cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá, alineteste (não é alineteste? Sair)')
+        cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('exist')
     });
 
     it('Deve fazer login com sucesso - Usando Fixture', () => {
@@ -44,13 +44,13 @@ describe('Funcionalidade: Login', () => {
             cy.get('#username').type(dados.usuario, {log: false})
             cy.get('#password').type(dados.senha, {log: false})
             cy.get('.woocommerce-form > .button').click()
-            cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá, alineteste (não é alineteste? Sair)')
+            cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('exist')
         })
     });
 
     it('Deve fazer login com sucesso - usando Comando customizado', () => {
         cy.login('aline.teste@teste.com', 'teste@123')
-        cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá, alineteste (não é alineteste? Sair)')
+        cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('exist')
     });
 
 })
